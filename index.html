@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himanshu Kumar | Portfolio</title>
+  <meta name="description" content="Portfolio of Himanshu Kumar — Video Editor & Creative Architect crafting stories frame by frame.">
+  <meta name="keywords" content="Portfolio, Video Editor, Post Production, Himanshu Kumar, Creative Direction">
+
+  <!-- Google Fonts: Poppins (All Weights) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  
+  <!-- Swiper.js CSS CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- EmailJS SDK v4 CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Tailwind CSS CDN for utility support -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            crimson: {
+              DEFAULT: '#800e17',
+              dark: '#450509',
+              deep: '#5a0a10',
+              accent: '#ff2e44',
+              light: '#ff5c70'
+            },
+            concrete: '#240507',
+            terracotta: {
+              DEFAULT: '#ff2e44',
+              light: '#ff5c70',
+              dark: '#cc1429'
+            },
+            sand: {
+              DEFAULT: '#DEC09D',
+              light: '#E8CAA8',
+              dark: '#C8A882'
+            },
+            paper: {
+              DEFAULT: '#f7eedd',
+              muted: '#e7dac9'
+            },
+            cream: '#faeedd'
+          },
+          fontFamily: {
+            sans: ['Poppins', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+            heading: ['Poppins', 'sans-serif'],
+            body: ['Poppins', 'sans-serif'],
+            mono: ['ui-monospace', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-concrete text-paper selection-brand">
+
+  <!-- Noise and Ambient Glow Backgrounds -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+  <div class="ambient-glow glow-top" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom" aria-hidden="true"></div>
+
+  <!-- Header Navigation (Slim Glassmorphism) -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <nav class="nav-container max-w-7xl mx-auto px-4 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <a href="#hero" class="brand-logo flex items-center gap-2 group">
+          <span class="brand-text font-bold text-sm sm:text-base text-paper tracking-tight">Himanshu's Portfolio</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-terracotta"></span>
+        </a>
+        <a href="tel:+919667341764" class="phone-pill hidden lg:inline-flex items-center gap-1.5 text-[11px] text-paper/90 bg-white/5 hover:bg-white/10 border border-white/10 px-2.5 py-1 rounded-full transition-all">
+          <i class="fa-solid fa-phone text-[9px] text-terracotta"></i>
+          <span>+91 9667341764</span>
+        </a>
+      </div>
+
+      <!-- Desktop Nav: Only Home, About, Projects, Services, Reviews -->
+      <ul class="nav-links hidden md:flex items-center gap-6 text-[13px] font-medium text-paper/85">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center gap-2.5">
+        <a href="#contact" class="btn-hire-me hidden sm:inline-flex items-center justify-center font-bold text-xs text-[#120204] bg-paper hover:bg-cream px-4 py-1.5 rounded-full shadow-md transition-transform hover:scale-105">
+          <span>Hire Me</span>
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-paper p-1.5 focus:outline-none" aria-label="Toggle Menu">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer: Only Home, About, Projects, Services, Reviews -->
+    <div id="mobile-drawer" class="mobile-drawer hidden md:hidden">
+      <ul class="flex flex-col gap-4 p-6">
+        <li><a href="#hero" class="mobile-link">Home</a></li>
+        <li><a href="#about" class="mobile-link">About</a></li>
+        <li><a href="#projects" class="mobile-link">Projects</a></li>
+        <li><a href="#services" class="mobile-link">Services</a></li>
+        <li><a href="#testimonials" class="mobile-link">Reviews</a></li>
+      </ul>
+    </div>
+  </header>
+
+    <!-- HERO SECTION: Person with Big Editorial Name Behind -->
+    <section id="hero" class="hero-section relative min-h-[85vh] sm:min-h-[88vh] flex items-center justify-center pt-20 pb-2 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      
+      <!-- Behind-the-Subject Big Typography (Reference Style) -->
+      <div class="hero-backdrop-name" aria-hidden="true">
+        <span class="name-line">HIMANSHU</span>
+        <span class="name-line">KUMAR</span>
+      </div>
+
+      <div class="max-w-4xl w-full mx-auto relative z-10 flex flex-col items-center justify-center">
+        
+        <!-- Clean Seamless Hero Image (A bit smaller & compact) -->
+        <div class="hero-image-wrapper relative w-full max-w-[380px] sm:max-w-[420px] md:max-w-[450px] lg:max-w-[480px] mx-auto z-10">
+          <!-- Responsive Image Container without border or card outline -->
+          <div class="hero-image-frame relative">
+            <img 
+              id="hero-reference-img" 
+              src="assets/LULU.png" 
+              alt="Himanshu Kumar" 
+              class="w-full h-auto object-cover object-top"
+              loading="eager"
+            />
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: ABOUT ME (Seamless Flow from Hero) -->
+    <section id="about" class="about-section pt-12 pb-24 sm:pt-16 sm:pb-28 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+      <!-- Reference Style Background Watermark -->
+      <div class="section-watermark about-watermark" aria-hidden="true">ABOUT ME</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+          
+          <!-- Left Column: Front Portrait Card (himanshu-front.png) -->
+          <div class="lg:col-span-5 flex justify-center">
+            <div class="about-photo-wrapper relative w-full max-w-[320px] sm:max-w-[360px]">
+              <!-- Rounded Portrait Frame matching reference image -->
+              <div class="about-photo-frame relative overflow-hidden rounded-3xl shadow-2xl shadow-black/80 border border-white/10">
+                <img 
+                  src="assets/himanshu-front.png" 
+                  alt="Himanshu Kumar Portrait" 
+                  class="w-full h-auto object-cover block"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Editorial Title & Story Narrative -->
+          <div class="lg:col-span-7 space-y-6">
+            <div class="about-heading-group">
+              <h2 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-black uppercase tracking-tight leading-[1.08]">
+                <span class="block text-white">CRAFTING STORIES</span>
+                <span class="block text-[#120204] font-black mt-1">FRAME BY FRAME</span>
+              </h2>
+            </div>
+
+            <div class="about-narrative space-y-5 text-sm sm:text-[0.95rem] text-[#f2c4c8]/90 font-normal leading-relaxed">
+              <p>
+                I’m Himanshu Kumar, a freelance video editor based in Noida, India. I’ve spent more than 2 years refining the art of post-production across YouTube, documentary, commercial, and social content — working with creators, brands, and agencies who refuse to settle for average.
+              </p>
+              <p>
+                My philosophy is simple: every cut is intentional, every transition serves the story, and every second of silence is earned. I don’t just assemble footage — I architect emotion.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+        <!-- SECTION 3: FEATURED PROJECTS (INFINITE AUTO-SCROLLING MARQUEE + LONG-FORM GRID) -->
+    <section id="projects" class="projects-section pt-16 pb-6 sm:pt-20 sm:pb-8 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+      <!-- Large Watermark Background Text -->
+      <div class="section-watermark my-work-watermark" aria-hidden="true">MY WORK</div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Header with Dual-Toned Title -->
+        <div class="section-header text-center mb-10 sm:mb-12">
+          <h2 class="text-3xl sm:text-4xl lg:text-[2.85rem] font-black tracking-tight leading-tight">
+            <span class="text-[#f4e4d0]">Featured </span><span class="text-[#120204]">Projects</span>
+          </h2>
+        </div>
+
+        <!-- 1. Infinite Auto-Scrolling Video Marquee (Shorts / Vertical Videos) -->
+        <div class="video-marquee-container w-full max-w-[1200px] mx-auto overflow-hidden relative py-4">
+          <div class="video-marquee-track flex items-center gap-6">
+            
+            <!-- SET 1: 15 Vertical Video Cards -->
+            <!-- Card 1 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/ICNzDGaGMeY/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/ICNzDGaGMeY?si=E4M1Ptk4HOEzb7K-" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/6VvHu-2q3X0/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/6VvHu-2q3X0?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/rBUYgQww1kM/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/rBUYgQww1kM?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/X86ECci51q8/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/X86ECci51q8?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/lY7QK9jP1aI/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/lY7QK9jP1aI?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/MRJxKmLTx2U/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/MRJxKmLTx2U?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/wDvBVhJeS_4/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/wDvBVhJeS_4?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/Qdvan8RrAc0/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/Qdvan8RrAc0?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/t0YharWWEIc/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/t0YharWWEIc?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 10 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/_r4kj7BTg8I/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/_r4kj7BTg8I?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 11 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/Q_368jmsPDQ/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/Q_368jmsPDQ?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 12 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/ZTocXZ-2eKw/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/ZTocXZ-2eKw?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 13 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/kIV50V-BFJo/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/kIV50V-BFJo?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 14 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/UHl72-NdsrA/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/UHl72-NdsrA?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 15 -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl">
+              <img src="https://img.youtube.com/vi/KzDHhSGwJlU/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/KzDHhSGwJlU?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- SET 2: DUPLICATE (15 Cards for seamless pure CSS infinite scroll) -->
+            <!-- Card 1 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/ICNzDGaGMeY/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/ICNzDGaGMeY?si=E4M1Ptk4HOEzb7K-" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 2 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/6VvHu-2q3X0/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/6VvHu-2q3X0?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 3 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/rBUYgQww1kM/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/rBUYgQww1kM?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 4 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/X86ECci51q8/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/X86ECci51q8?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 5 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/lY7QK9jP1aI/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/lY7QK9jP1aI?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 6 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/MRJxKmLTx2U/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/MRJxKmLTx2U?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 7 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/wDvBVhJeS_4/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/wDvBVhJeS_4?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 8 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/Qdvan8RrAc0/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/Qdvan8RrAc0?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 9 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/t0YharWWEIc/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/t0YharWWEIc?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 10 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/_r4kj7BTg8I/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/_r4kj7BTg8I?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 11 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/Q_368jmsPDQ/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/Q_368jmsPDQ?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 12 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/ZTocXZ-2eKw/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/ZTocXZ-2eKw?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 13 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/kIV50V-BFJo/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/kIV50V-BFJo?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 14 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/UHl72-NdsrA/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/UHl72-NdsrA?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Card 15 Duplicate -->
+            <div class="video-marquee-card relative flex-shrink-0 rounded-[18px] overflow-hidden bg-[#2c070a] border border-[#f4e4d0]/20 shadow-2xl" aria-hidden="true">
+              <img src="https://img.youtube.com/vi/KzDHhSGwJlU/hqdefault.jpg" alt="YouTube Short" class="w-full h-full object-cover" loading="lazy" />
+              <a href="https://youtube.com/shorts/KzDHhSGwJlU?feature=share" target="_blank" rel="noopener noreferrer" class="card-hover-overlay absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300" tabindex="-1">
+                <div class="play-badge w-14 h-14 rounded-full bg-[#ff0000] text-white flex items-center justify-center shadow-lg transform transition-transform hover:scale-110">
+                  <i class="fa-solid fa-play text-xl ml-1"></i>
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. Long-Form Video Showcase Grid (Exact Match to Image 2) -->
+        <div class="long-videos-container max-w-6xl mx-auto mt-12 sm:mt-14">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Long Video Card 1 -->
+            <div class="long-video-card rounded-[20px] overflow-hidden border border-white/14 shadow-2xl bg-[#8c0f19]/28 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/45 hover:shadow-[#ff2e44]/30">
+              <div class="relative w-full pb-[56.25%] bg-black/40 overflow-hidden">
+                <iframe 
+                  src="https://www.youtube.com/embed/mNUorOUuACE?rel=0&cc_load_policy=0&cc_lang_pref=en" 
+                  title="You're Ruining Your Desk Setup Without Realizing It" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen 
+                  loading="lazy" 
+                  class="absolute inset-0 w-full h-full border-0">
+                </iframe>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <h3 class="text-xl font-bold text-paper">You're Ruining Your Desk Setup Without Realizing It</h3>
+                <p class="text-xs sm:text-sm text-paper-muted leading-relaxed">
+                  Focuses on sharp before-and-after visual contrasts and clean, cinematic B-roll to instantly demonstrate the impact of lighting and ergonomic changes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Long Video Card 2 -->
+            <div class="long-video-card rounded-[20px] overflow-hidden border border-white/14 shadow-2xl bg-[#8c0f19]/28 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/45 hover:shadow-[#ff2e44]/30">
+              <div class="relative w-full pb-[56.25%] bg-black/40 overflow-hidden">
+                <iframe 
+                  src="https://www.youtube.com/embed/ZCs5EinfYiI?rel=0&cc_load_policy=0&cc_lang_pref=en" 
+                  title="building our dream desk setup after being jealous of everyone else's" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen 
+                  loading="lazy" 
+                  class="absolute inset-0 w-full h-full border-0">
+                </iframe>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <h3 class="text-xl font-bold text-paper">building our dream desk setup after being jealous of everyone else's</h3>
+                <p class="text-xs sm:text-sm text-paper-muted leading-relaxed">
+                  Utilizes engaging time-lapses and build montages, transitioning from a messy room teardown to a highly polished final reveal of the workspace.
+                </p>
+              </div>
+            </div>
+
+            <!-- Long Video Card 3 -->
+            <div class="long-video-card rounded-[20px] overflow-hidden border border-white/14 shadow-2xl bg-[#8c0f19]/28 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/45 hover:shadow-[#ff2e44]/30">
+              <div class="relative w-full pb-[56.25%] bg-black/40 overflow-hidden">
+                <iframe 
+                  src="https://www.youtube.com/embed/FC_bti_AHpI?rel=0&cc_load_policy=0&cc_lang_pref=en" 
+                  title="The 7 Levels of Desk Setup Addiction Nobody Talks About" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen 
+                  loading="lazy" 
+                  class="absolute inset-0 w-full h-full border-0">
+                </iframe>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <h3 class="text-xl font-bold text-paper">The 7 Levels of Desk Setup Addiction Nobody Talks About</h3>
+                <p class="text-xs sm:text-sm text-paper-muted leading-relaxed">
+                  Employs narrative-driven pacing and visual progression, using dynamic product shots to illustrate the escalating "levels" of a tech-buying addiction.
+                </p>
+              </div>
+            </div>
+
+            <!-- Long Video Card 4 -->
+            <div class="long-video-card rounded-[20px] overflow-hidden border border-white/14 shadow-2xl bg-[#8c0f19]/28 backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/45 hover:shadow-[#ff2e44]/30">
+              <div class="relative w-full pb-[56.25%] bg-black/40 overflow-hidden">
+                <iframe 
+                  src="https://www.youtube.com/embed/eyxBy0VC5xQ?rel=0&cc_load_policy=0&cc_lang_pref=en" 
+                  title="Do THIS and the Algorithm Will Actually Push You in 2026" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  allowfullscreen 
+                  loading="lazy" 
+                  class="absolute inset-0 w-full h-full border-0">
+                </iframe>
+              </div>
+              <div class="p-6 sm:p-7 space-y-3">
+                <h3 class="text-xl font-bold text-paper">Do THIS and the Algorithm Will Actually Push You in 2026</h3>
+                <p class="text-xs sm:text-sm text-paper-muted leading-relaxed">
+                  Uses fast-paced, minimalist stick-figure animation and rapid-fire visual text cues to maintain high viewer retention while delivering a dense list of 21 tips.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5: WHAT I OFFER (SERVICES - 3D FANNED CARD STACK & HOVER SPREAD) -->
+    <section class="section services-section pt-4 pb-16 sm:pt-6 sm:pb-20 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden" id="services">
+      <div class="container services-container-new max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-14">
+        <!-- Left Column: Typography & Headline (Kept intact) -->
+        <div class="services-left-col w-full lg:w-auto max-w-lg relative z-10 text-center lg:text-left shrink-0">
+          <div class="services-header-left relative inline-block">
+            <span class="services-tag-sm select-none pointer-events-none" aria-hidden="true">WHAT I OFFER</span>
+            <h2 class="services-title-sm">Services</h2>
+          </div>
+          <p class="services-hero-text text-lg sm:text-xl lg:text-2xl font-semibold leading-snug mt-6 sm:mt-8 max-w-md mx-auto lg:mx-0">
+            I create <span class="text-black font-black">unconventional</span> yet functional &amp; visually pleasing content
+          </p>
+        </div>
+
+        <!-- Right Column: 5-Card 3D Fanned Stack (Shifted a bit Left towards Text) -->
+        <div class="services-right-col w-full lg:w-auto flex justify-center items-center relative min-h-[360px] sm:min-h-[400px] shrink-0 -translate-x-0 lg:-translate-x-6">
+          <div class="services-card-stack relative">
+            <!-- Card 1: YouTube Editing -->
+            <div class="stack-card card-1 glass-card">
+              <div class="stack-card-inner">
+                <div class="stack-icon-box"><i class="fa-brands fa-youtube"></i></div>
+                <h4 class="stack-card-title">YouTube Editing</h4>
+                <p class="stack-card-sub">Retention Pacing &amp; B-Roll</p>
+                <div class="stack-card-img-wrapper">
+                  <img src="./assets/youtube.jpg" alt="YouTube Editing" class="stack-preview-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Short Form Content -->
+            <div class="stack-card card-2 glass-card">
+              <div class="stack-card-inner">
+                <div class="stack-icon-box"><i class="fa-solid fa-bolt"></i></div>
+                <h4 class="stack-card-title">Short Form Content</h4>
+                <p class="stack-card-sub">Reels, Shorts &amp; TikToks</p>
+                <div class="stack-card-img-wrapper">
+                  <img src="./assets/short-form-video-trends.jpg" alt="Short Form Content" class="stack-preview-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Podcast Editing -->
+            <div class="stack-card card-3 glass-card">
+              <div class="stack-card-inner">
+                <div class="stack-icon-box"><i class="fa-solid fa-microphone"></i></div>
+                <h4 class="stack-card-title">Podcast Editing</h4>
+                <p class="stack-card-sub">Clean Audio &amp; Captions</p>
+                <div class="stack-card-img-wrapper">
+                  <img src="./assets/podcast.jpg" alt="Podcast Editing" class="stack-preview-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4: Commercial Ads -->
+            <div class="stack-card card-4 glass-card">
+              <div class="stack-card-inner">
+                <div class="stack-icon-box"><i class="fa-solid fa-desktop"></i></div>
+                <h4 class="stack-card-title">Commercial Ads</h4>
+                <p class="stack-card-sub">Social &amp; TV Campaigns</p>
+                <div class="stack-card-img-wrapper">
+                  <img src="./assets/commercial-ads-preview.jpg" alt="Commercial Ads" class="stack-preview-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5: Motion Graphics -->
+            <div class="stack-card card-5 glass-card">
+              <div class="stack-card-inner">
+                <div class="stack-icon-box"><i class="fa-solid fa-layer-group"></i></div>
+                <h4 class="stack-card-title">Motion Graphics</h4>
+                <p class="stack-card-sub">Lower Thirds &amp; VFX</p>
+                <div class="stack-card-img-wrapper">
+                  <img src="./assets/motion-designer-software-vector.jpg" alt="Motion Graphics" class="stack-preview-img" loading="lazy">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: CLIENT STORIES / SOCIAL PROOF (5 TESTIMONIAL CARDS CAROUSEL) -->
+    <section id="testimonials" class="testimonials-section pt-16 pb-6 sm:pt-20 sm:pb-8 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+      <!-- Reference Style Background Watermark -->
+      <div class="section-watermark social-proof-watermark select-none pointer-events-none" aria-hidden="true">SOCIAL PROOF</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Dual-toned Header -->
+        <div class="section-header text-center mb-12 sm:mb-14">
+          <h2 class="text-3xl sm:text-4xl lg:text-[2.85rem] font-black tracking-tight leading-tight">
+            <span class="text-paper">Client </span><span class="text-[#120204]">Stories</span>
+          </h2>
+        </div>
+
+        <!-- 5 Cards Slider Container -->
+        <div class="testimonials-carousel-wrapper relative overflow-hidden py-2">
+          <div id="testimonials-track" class="testimonials-track flex transition-transform duration-500 ease-out gap-6">
+            
+            <!-- Card 1: Rachit Singh -->
+            <div class="testimonial-card flex-shrink-0 rounded-[22px] bg-[#630d17]/40 border border-white/10 p-7 sm:p-8 flex flex-col justify-between shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/40">
+              <div>
+                <div class="stars-row text-amber-300 text-sm flex gap-1 mb-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote text-xs sm:text-[13px] text-paper/90 leading-relaxed font-normal">
+                  “Working with him was a great experience. His editing skills are excellent, and the motion graphics really made the videos stand out. He has a strong sense of pacing, clean transitions, and knows how to make content engaging without overdoing the effects. The final result looked polished and professional.”
+                </p>
+              </div>
+              <div class="testimonial-author flex items-center gap-3 pt-6 mt-4 border-t border-white/5">
+                <img src="assets/rachit-singh-avatar.jpeg" alt="Rachit Singh" class="w-10 h-10 rounded-full object-cover border border-white/20 shadow-md flex-shrink-0" loading="lazy" />
+                <span class="author-name font-bold text-sm sm:text-base text-paper">Rachit Singh</span>
+              </div>
+            </div>
+
+            <!-- Card 2: Elias Antonio Marcella -->
+            <div class="testimonial-card flex-shrink-0 rounded-[22px] bg-[#630d17]/40 border border-white/10 p-7 sm:p-8 flex flex-col justify-between shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/40">
+              <div>
+                <div class="stars-row text-amber-300 text-sm flex gap-1 mb-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote text-xs sm:text-[13px] text-paper/90 leading-relaxed font-normal">
+                  “One thing I really appreciated was his professionalism and punctuality. He always delivered the work on time and kept me updated throughout the project. Even with revisions, he was quick to respond and made the changes without unnecessary delays. Very reliable to work with.”
+                </p>
+              </div>
+              <div class="testimonial-author flex items-center gap-3 pt-6 mt-4 border-t border-white/5">
+                <img src="assets/elias-marcella-avatar.png" alt="Elias Antonio Marcella" class="w-10 h-10 rounded-full object-cover border border-white/20 shadow-md flex-shrink-0" loading="lazy" />
+                <span class="author-name font-bold text-sm sm:text-base text-paper">Elias Antonio Marcella</span>
+              </div>
+            </div>
+
+            <!-- Card 3: Lim Siew Lan -->
+            <div class="testimonial-card flex-shrink-0 rounded-[22px] bg-[#630d17]/40 border border-white/10 p-7 sm:p-8 flex flex-col justify-between shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/40">
+              <div>
+                <div class="stars-row text-amber-300 text-sm flex gap-1 mb-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote text-xs sm:text-[13px] text-paper/90 leading-relaxed font-normal">
+                  “Communication was smooth from start to finish. He understood the requirements clearly, asked the right questions whenever needed, and was easy to work with. He was polite, responsive, and always open to feedback, which made the entire editing process simple and stress-free.”
+                </p>
+              </div>
+              <div class="testimonial-author flex items-center gap-3 pt-6 mt-4 border-t border-white/5">
+                <img src="assets/lim-siew-lan-avatar.png" alt="Lim Siew Lan" class="w-10 h-10 rounded-full object-cover border border-white/20 shadow-md flex-shrink-0" loading="lazy" />
+                <span class="author-name font-bold text-sm sm:text-base text-paper">Lim Siew Lan</span>
+              </div>
+            </div>
+
+            <!-- Card 4: General Review 1 -->
+            <div class="testimonial-card flex-shrink-0 rounded-[22px] bg-[#630d17]/40 border border-white/10 p-7 sm:p-8 flex flex-col justify-between shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/40">
+              <div>
+                <div class="stars-row text-amber-300 text-sm flex gap-1 mb-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote text-xs sm:text-[13px] text-paper/90 leading-relaxed font-normal">
+                  “Delivered exactly what I needed — clean cuts, smooth transitions, and a professional finish.”
+                </p>
+              </div>
+              <div class="testimonial-author flex items-center gap-3 pt-6 mt-4 border-t border-white/5">
+                <span class="author-name font-bold text-sm sm:text-base text-paper">Client Review</span>
+              </div>
+            </div>
+
+            <!-- Card 5: General Review 2 -->
+            <div class="testimonial-card flex-shrink-0 rounded-[22px] bg-[#630d17]/40 border border-white/10 p-7 sm:p-8 flex flex-col justify-between shadow-2xl backdrop-blur-md transition-all duration-300 hover:-translate-y-1.5 hover:border-[#ff2e44]/40">
+              <div>
+                <div class="stars-row text-amber-300 text-sm flex gap-1 mb-4">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-quote text-xs sm:text-[13px] text-paper/90 leading-relaxed font-normal">
+                  “Turned my raw footage into something engaging and polished. Great eye for detail.”
+                </p>
+              </div>
+              <div class="testimonial-author flex items-center gap-3 pt-6 mt-4 border-t border-white/5">
+                <span class="author-name font-bold text-sm sm:text-base text-paper">Client Review</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Navigation Controls (Centered Chevron Arrows Matching Image 2/3) -->
+        <div class="flex items-center justify-center gap-4 mt-8">
+          <button id="testimonial-prev-btn" class="testimonial-nav-btn w-11 h-11 rounded-full bg-[#520911]/80 hover:bg-[#740f1a] border border-white/10 text-paper flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 shadow-lg" aria-label="Previous Review">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          <button id="testimonial-next-btn" class="testimonial-nav-btn w-11 h-11 rounded-full bg-[#520911]/80 hover:bg-[#740f1a] border border-white/10 text-paper flex items-center justify-center transition-all duration-200 hover:scale-110 active:scale-95 shadow-lg" aria-label="Next Review">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 7: CONTACT / GET IN TOUCH SECTION (Close to Reviews & Blended Borders) -->
+    <section id="contact" class="pt-4 pb-16 sm:pt-6 sm:pb-20 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden">
+      <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- Dual-toned Section Title -->
+        <h2 class="text-4xl sm:text-5xl lg:text-[3.2rem] font-black text-center mb-10 sm:mb-12 tracking-tight">
+          <span class="text-paper">Get In </span><span class="text-[#120204]">Touch</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Contact Information Card -->
+          <div class="lg:col-span-5 rounded-[26px] bg-[#5a0c16]/30 border border-white/5 p-8 sm:p-9 shadow-2xl backdrop-blur-md">
+            <h3 class="text-2xl font-black text-paper mb-2">Contact Information</h3>
+            <p class="text-xs sm:text-sm text-paper/75 leading-relaxed mb-8">
+              Feel free to reach out through the contact form or directly via email or social channels.
+            </p>
+
+            <div class="space-y-6">
+              <!-- Item 1: Email -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#ff0000]/15 text-[#ff4d61] border border-[#ff0000]/20 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-black tracking-wider text-paper/50 uppercase block">EMAIL</span>
+                  <a href="mailto:overlordyt621@gmail.com" class="text-sm font-bold text-paper hover:text-paper/90 transition-colors">overlordyt621@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Item 2: Location -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#ff0000]/15 text-[#ff4d61] border border-[#ff0000]/20 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-black tracking-wider text-paper/50 uppercase block">LOCATION</span>
+                  <p class="text-sm font-bold text-paper">Available Worldwide / Remote</p>
+                </div>
+              </div>
+
+              <!-- Item 3: Availability -->
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-[#ff0000]/15 text-[#ff4d61] border border-[#ff0000]/20 flex items-center justify-center text-sm flex-shrink-0 mt-0.5">
+                  <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                  <span class="text-[11px] font-black tracking-wider text-paper/50 uppercase block">AVAILABILITY</span>
+                  <p class="text-sm font-bold text-paper">Open for Freelance & Full-time</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links Row (LinkedIn, X, Instagram) -->
+            <div class="flex items-center gap-3 pt-10 mt-8 border-t border-white/5">
+              <a href="https://www.linkedin.com/in/narender-kumar-48085a422?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-paper flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 shadow-md" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://x.com/himanxhuedit04" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-paper flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 shadow-md" aria-label="Twitter / X">
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a href="https://www.instagram.com/himanxhu.exp?igsh=MTczaDYxaDd1NHJ3Mw%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-paper flex items-center justify-center text-sm transition-all duration-200 hover:scale-110 shadow-md" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive EmailJS Contact Form Card (Blended Inputs) -->
+          <div class="lg:col-span-7 rounded-[26px] bg-[#5a0c16]/30 border border-white/5 p-8 sm:p-10 shadow-2xl backdrop-blur-md">
+            <form id="contact-form" class="space-y-5">
+              
+              <!-- Field 1: Name -->
+              <div>
+                <label for="from_name" class="block text-xs font-bold text-paper mb-2">Your Name</label>
+                <input 
+                  type="text" 
+                  id="from_name" 
+                  name="from_name" 
+                  required 
+                  placeholder="John Doe" 
+                  class="w-full bg-[#140104]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-paper placeholder-white/20 focus:border-[#ff2e44]/40 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Field 2: Email -->
+              <div>
+                <label for="from_email" class="block text-xs font-bold text-paper mb-2">Your Email</label>
+                <input 
+                  type="email" 
+                  id="from_email" 
+                  name="from_email" 
+                  required 
+                  placeholder="john@example.com" 
+                  class="w-full bg-[#140104]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-paper placeholder-white/20 focus:border-[#ff2e44]/40 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Field 3: Subject -->
+              <div>
+                <label for="subject" class="block text-xs font-bold text-paper mb-2">Subject</label>
+                <input 
+                  type="text" 
+                  id="subject" 
+                  name="subject" 
+                  required 
+                  placeholder="Project Inquiry / Collaboration" 
+                  class="w-full bg-[#140104]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-paper placeholder-white/20 focus:border-[#ff2e44]/40 focus:outline-none transition-colors"
+                />
+              </div>
+
+              <!-- Field 4: Message -->
+              <div>
+                <label for="message" class="block text-xs font-bold text-paper mb-2">Message</label>
+                <textarea 
+                  id="message" 
+                  name="message" 
+                  rows="5" 
+                  required 
+                  placeholder="Tell me about your project..." 
+                  class="w-full bg-[#140104]/60 border border-white/5 rounded-xl px-4 py-3.5 text-sm text-paper placeholder-white/20 focus:border-[#ff2e44]/40 focus:outline-none transition-colors resize-none"
+                ></textarea>
+              </div>
+
+              <!-- Send Button -->
+              <button 
+                type="submit" 
+                id="submit-btn" 
+                class="w-full py-4 rounded-full bg-[#120204] hover:bg-[#1a0306] text-paper font-bold text-sm sm:text-base flex items-center justify-center gap-2.5 transition-all duration-300 shadow-xl border border-white/5 hover:border-white/10 active:scale-[0.99] cursor-pointer"
+              >
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane text-xs ml-1"></i>
+              </button>
+
+              <!-- Live Status Message -->
+              <div id="form-status" class="hidden text-center text-xs font-semibold p-3.5 rounded-xl transition-all duration-300"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating Scroll To Top Red Button (Reference Feature) -->
+  <a href="#hero" class="floating-scroll-top" title="Back to top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <!-- Quick View Project Modal -->
+  <div id="project-modal" class="modal-backdrop hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
+    <div class="modal-card glass-panel max-w-xl w-full p-6 sm:p-8 rounded-2xl relative border border-white/20">
+      <button id="close-modal-btn" class="absolute top-4 right-4 text-paper-muted hover:text-paper text-xl" aria-label="Close Modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-content">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Swiper.js Bundle JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
